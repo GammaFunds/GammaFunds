@@ -78,7 +78,7 @@ This includes decomposing the manual indexing workflow into controlled technical
 
 The project is under active development and hardening. Core document, evidence, candidate, review, lifecycle, and validation components exist, but this is **not presented as a finished production service**.
 
-No public claim is made about production throughput, user numbers, customer time savings, or error reduction.
+No public claim is made about production throughput, user numbers, time savings, or error reduction.
 
 ## Technical footprint
 
@@ -94,6 +94,6 @@ These figures describe implementation scope only. They are not presented as prod
 
 ## Public scope
 
-This case study intentionally excludes publisher or client identities, unpublished manuscript content, real index data, private datasets, credentials, local paths, infrastructure details, and proprietary source code.
+This case study is limited to disclosure-safe architecture, workflow concepts, and aggregate implementation metrics.
 
-Any future demonstration will use synthetic source material and expose only the minimum technical detail necessary to explain the engineering approach.
+Non-public third-party content, real manuscript or index data, private datasets, credentials, operational details, and proprietary source code are intentionally excluded. Any future demonstration will use synthetic source material.
