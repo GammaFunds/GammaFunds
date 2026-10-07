@@ -90,8 +90,6 @@ Verified corpus snapshots include:
 - **Germany + Switzerland:** **216,537 canonical provisions**
 - an EU AI Act vertical slice acquired through the EU Publications Office infrastructure and activated into the canonical model
 
-The EU Publications Office's Cellar service is itself a multilingual, machine-readable repository for EU publications and metadata, making it representative of the heterogeneous institutional interfaces the platform is designed to integrate.
-
 ## Verification footprint
 
 As supporting implementation evidence, the current backend tree contains:
@@ -112,18 +110,18 @@ A real EU read-path acceptance run exposed a structured-label edge case in which
 
 The correction deliberately kept exact matching as the fast path and added only bounded whitespace normalization. Case, punctuation, abbreviations, language, type scope, and ambiguity semantics remain distinct.
 
-This is representative of the project's quality approach: use real source evidence to expose narrow interoperability failures, then correct only the demonstrated failure mode and regression-test the boundary.
+This illustrates the project's quality approach: use real source evidence to expose narrow interoperability failures, then correct only the demonstrated failure mode and regression-test the boundary.
 
 ## Current state
 
 The platform is under active development. German and Swiss corpora have been processed, and the EU AI Act provides an initial canonical EU vertical slice.
 
-The most recent resolver correction has been implemented, reviewed, and validated, but the final full provider-free EU public-read rerun after that correction is not presented here as completed.
+The EU vertical slice remains under acceptance hardening and is not presented as a completed release.
 
 No public claim is made about measured user time savings, ROI, or a finished production service.
 
 ## Public scope
 
-This case study is limited to disclosure-safe architecture, provider integration concepts, aggregate corpus metrics, and verified engineering characteristics.
+This case study is limited to disclosure-safe architecture, provider-integration concepts, aggregate corpus metrics, and verified engineering characteristics.
 
-The source repository remains private. Private runtime configuration, infrastructure details, internal identifiers, local paths, operational logs, and cached source corpora are not part of this portfolio.
+Private runtime configuration, infrastructure details, internal identifiers, operational logs, cached source corpora, and source code are not part of this public portfolio.
