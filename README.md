@@ -1,6 +1,6 @@
 # Engineering reliable digital systems for complex information workflows
 
-I work on digital systems that structure complex information, automate high-friction workflows, and preserve provenance, uncertainty, and operator control.
+I build privacy-aware and traceable digital systems for complex information and operational workflows, with a focus on information security, controlled automation, and evidence-based system behavior.
 
 Current work focuses on legal information infrastructure, AI-assisted scholarly publishing workflows, and evidence-oriented project-state tooling.
 
