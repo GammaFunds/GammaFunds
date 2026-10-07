@@ -88,7 +88,17 @@ Verified corpus snapshots include:
 - **Germany:** 6,137 legal acts and 92,395 provisions
 - **Switzerland:** 5,337 works and 124,142 provisions
 - **Germany + Switzerland:** **216,537 canonical provisions**
-- an EU AI Act vertical slice acquired through the EU Publications Office infrastructure and activated into the canonical model
+- **EU AI Act:** a production-like CELLAR vertical slice from official source retrieval through canonical activation and provider-neutral public reads
+
+For the EU AI Act (`CELEX 32024R1689`), **93 German article provisions** were activated into the canonical model and **93/93 public provision reads** succeeded. CELEX resolution, search, legal-act reads, and structure reads were also verified.
+
+The completed public read path required:
+
+- **0 provider requests**
+- **0 raw-evidence store reads**
+- **0 database mutations**
+
+Provenance remained traceable to the underlying source record. Missing language remains explicitly unavailable rather than silently falling back, and unknown legal validity remains unresolved rather than being treated as current.
 
 ## Verification footprint
 
@@ -110,13 +120,13 @@ A real EU read-path acceptance run exposed a structured-label edge case in which
 
 The correction deliberately kept exact matching as the fast path and added only bounded whitespace normalization. Case, punctuation, abbreviations, language, type scope, and ambiguity semantics remain distinct.
 
-This illustrates the project's quality approach: use real source evidence to expose narrow interoperability failures, then correct only the demonstrated failure mode and regression-test the boundary.
+The fix was independently reviewed and validated with **360 relevant resolver/API tests**, typechecks, linting, and formatting checks.
+
+This illustrates the project's quality approach: use real source evidence to expose narrow interoperability failures, then correct only the demonstrated failure mode and regression-test the boundary without rewriting persisted source data.
 
 ## Current state
 
-The platform is under active development. German and Swiss corpora have been processed, and the EU AI Act provides an initial canonical EU vertical slice.
-
-The EU vertical slice remains under acceptance hardening and is not presented as a completed release.
+The platform is under active development. German and Swiss corpora have been processed, and the EU AI Act now provides a completed, production-like end-to-end vertical slice through the provider-neutral read path.
 
 No public claim is made about measured user time savings, ROI, or a finished production service.
 
