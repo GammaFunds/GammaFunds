@@ -135,3 +135,7 @@ No public claim is made about measured user time savings, ROI, or a finished pro
 This case study is limited to disclosure-safe architecture, provider-integration concepts, aggregate corpus metrics, and verified engineering characteristics.
 
 Private runtime configuration, infrastructure details, internal identifiers, operational logs, cached source corpora, and source code are not part of this public portfolio.
+
+## Related public project
+
+[European Law Lookup](https://github.com/GammaFunds/European-Law-Lookup) is an earlier public implementation in the same legal-information domain. The Obsidian plugin integrates official legal-text sources from the EU and several European jurisdictions and provides a publicly inspectable example of source-aware retrieval and provider integration that preceded the broader platform work.
