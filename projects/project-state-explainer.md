@@ -130,12 +130,12 @@ These figures describe implementation and verification scope only. They are not 
 
 ## Current state
 
-PSE is under active development. Its internal technical validation is substantial, but the product has **not been externally validated as a finished market product**, and its ProjectLog v2 model remains Candidate/Draft.
+PSE is under active development and has not completed external product validation. ProjectLog v2 remains Candidate/Draft.
 
 No public claim is made about user adoption, time savings, ROI, production-scale performance, or superiority over existing project-management products.
 
 ## Public scope
 
-This case study is intentionally limited to disclosure-safe architecture, workflow concepts, and aggregate implementation metrics.
+This case study is limited to disclosure-safe architecture, workflow concepts, and aggregate implementation metrics.
 
-Future examples and screenshots will use synthetic project data. The source code is not publicly released at this stage.
+Real project data, private operational context, and source code are intentionally excluded. Future examples and screenshots will use synthetic project data.
