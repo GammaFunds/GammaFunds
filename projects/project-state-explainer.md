@@ -1,10 +1,12 @@
 # Project State Explainer (PSE)
 
-> Evidence-backed project intelligence for complex digital transformation — with a strategic focus on public administration.
+> Deterministic, evidence-backed project intelligence for complex digital transformation — local-first, without AI, and with a strategic focus on public administration.
 
 **Mission.** Make digital transformation projects easier to understand, govern, and hand over by distinguishing documented activity from demonstrated progress, decision authority, and measured outcomes.
 
 **Product direction.** PSE is a local-first, method-neutral explanation and review layer around existing project information. The long-term ambition is a commercially viable **Project Intelligence & Decision Platform**: broadly useful across sectors, with public-sector digitalization as a primary application domain.
+
+**AI-free by design.** PSE works without language models, model APIs, or mandatory cloud services. Its project-state interpretation, validation, history, reports, and planned intelligence features are to be implemented through explicit data contracts and deterministic, reviewable rules. AI features are **not part of the current product roadmap**. Using AI tools during software development does not make them dependencies of the PSE product.
 
 **Maturity.** Active engineering prototype. The platform is **not** presented as a finished commercial product, a validated public-sector deployment, or a substitute for existing project-management systems.
 
@@ -61,13 +63,13 @@ An accepted baseline remains immutable. An update cannot silently substitute a d
 
 Key design decisions include:
 
-- **Determinism before inference.** Core validation, comparison, and rendering do not require an LLM.
+- **Deterministic core, no AI dependency.** Validation, comparison, rendering, and planned project-state analysis operate on explicit records and reproducible rules, not generated answers.
 - **No invented project truth.** Source references provide traceability; structural validity and human review do not automatically verify factual claims.
 - **Explicit lifecycle and authority.** Draft, reviewed, accepted, observed, and externally verified states must not be conflated.
 - **Immutable baselines and bounded updates.** Identity and accepted content remain stable through review and change workflows.
 - **Freshness and uncertainty are visible.** A newer file is not automatically authoritative; absent evidence is not evidence of resolution.
 - **Fail closed on material conflicts.** The system does not guess its way through ambiguous identity or state.
-- **Local-first, vendor-independent operation.** Core workflows require no mandatory cloud service or AI provider.
+- **Local-first, data-minimizing operation.** Core workflows require no cloud service or AI provider; unnecessary collection, retention, and transmission of project information should be avoided.
 - **Compatibility over replacement.** PSE is designed to work alongside existing organizational processes and tools.
 
 ## Current implementation
@@ -88,32 +90,31 @@ These are implementation foundations, **not** evidence that the premium modules 
 
 ## Product vision: from project records to decision intelligence
 
-The proposed commercial product combines a common project-state core with complementary intelligence capabilities.
+The proposed commercial product combines a common, AI-free project-state core with complementary **deterministic** analysis capabilities. These are not model-generated recommendations; they depend on explicit source records, review authority, and rule-based evaluation.
 
 | Proposed capability | Intended value |
 | --- | --- |
-| **Project Truth Engine** | Reconcile documented claims with available evidence from project records, code, tests, CI, and other sources; expose contradictions, uncertainty, and verification limits rather than claiming omniscient truth. |
+| **Evidence & Consistency Engine** | Compare documented claims with available evidence from project records, code, tests, CI, and other explicitly authorized sources; expose inconsistencies, uncertainty, and verification limits rather than claiming omniscient truth. |
 | **Project Time Machine** | Reconstruct accepted historical states and explain what changed, why, and with which documented consequences. |
-| **Decision & Impact Intelligence** | Connect decisions, blockers, responsibilities, dependencies, and milestones; explore potential impacts without presenting scenarios as observed facts. |
-| **AI Project Copilot** | Answer questions about project state with inspectable source references and explicit uncertainty; AI remains optional and does not confer review authority. |
+| **Decision & Dependency Analysis** | Connect decisions, blockers, responsibilities, dependencies, and milestones through recorded relationships; distinguish documented consequences from explicitly hypothetical scenarios. |
 | **Architecture & Change Explorer** | Relate technical components, integrations, and changes to project objectives, decisions, risks, and evidence. |
-| **Project Portfolio Intelligence** | Compare projects and cross-organizational dependencies without collapsing incompatible states into misleading aggregate progress scores. |
-| **AI Project Continuity** | Produce evidence-bound handovers showing the accepted baseline, implementation state, known invariants, open blockers, reviews, and safe next steps across personnel or AI-agent changes. |
-| **Outcome Intelligence** | Separate delivery and adoption from measured benefits, and trace outcome claims to actual metrics rather than assuming that completed tasks imply public value. |
+| **Project Portfolio Analysis** | Compare projects and cross-organizational dependencies without collapsing incompatible states into misleading aggregate progress scores. |
+| **Project Continuity** | Generate deterministic, evidence-bound handovers showing the accepted baseline, implementation state, known invariants, open blockers, reviews, and bounded next steps across personnel or team changes. |
+| **Outcome & Impact Evidence** | Separate delivery and adoption from measured benefits, and trace outcome claims to actual metrics rather than assuming that completed tasks imply public value. |
 
-**Status of this table:** strategic roadmap, **not a list of shipped features**. Several concepts build on implemented state, comparison, evidence, or browser foundations; cross-source reconciliation, AI-assisted reasoning, technical architecture mapping, portfolio analysis, and measured-outcome evaluation still require separate design, implementation, and validation.
+**Status of this table:** strategic roadmap, **not a list of shipped features**. Several concepts build on implemented state, comparison, evidence, or browser foundations; cross-source reconciliation, rule-based dependency analysis, technical architecture mapping, portfolio analysis, and measured-outcome evaluation still require separate design, implementation, and validation.
 
 ### Project Continuity as a practical differentiator
 
 A project handover should answer: What was actually implemented? Which tests and reviews support that assessment? Which decisions are binding? What remains blocked? Which baseline and scope govern the next change?
 
-A future PSE handover could assemble these answers with exact source and revision identities, making transitions between teams, vendors, or AI-assisted development sessions more reliable. It must never manufacture a test result, authorization, or completed milestone.
+A future PSE handover could assemble these answers with exact source and revision identities, making transitions between teams, vendors, or delivery phases more reliable. It must never manufacture a test result, authorization, or completed milestone.
 
 ## Product focus and commercial hypotheses
 
 The intended **GovTech** application is project intelligence for public-sector digitalization: program steering, decision transparency, multi-stakeholder dependencies, handovers, and evidence-based assessments of service readiness and outcomes.
 
-The same core can serve **software teams, technical consultancies, AI-assisted development workflows, and cross-project portfolios**. Engineering environments offer an early opportunity to evaluate precise Git, test, and review evidence; public-sector workflows provide the long-term mission and a demanding validation context.
+The same core can serve **software teams, technical consultancies, IT project leaders, and cross-project portfolios**. Engineering environments offer an early opportunity to evaluate precise Git, test, and review evidence; public-sector workflows provide the long-term mission and a demanding validation context.
 
 Possible commercial offerings — **Core, Pro, Team, Gov, and Enterprise** — remain hypotheses rather than available plans or tested pricing. Public-sector adoption would also require appropriate procurement, accessibility, privacy, security, support, and deployment assessments. None of those requirements is claimed to be fulfilled merely by the current architecture.
 
@@ -123,7 +124,7 @@ A first meaningful external validation would test whether a new project stakehol
 
 My contribution is primarily **product and system architecture, process transformation, technical steering, and quality governance**.
 
-This includes defining project-state semantics; lifecycle, identity, and authority boundaries; source and evidence contracts; acceptance and regression gates; integration and recovery strategies; and the public-sector-oriented product direction. I direct AI-assisted engineering within bounded scopes and require implementation evidence to be distinguished from product validation.
+This includes defining project-state semantics; lifecycle, identity, and authority boundaries; source and evidence contracts; acceptance and regression gates; integration and recovery strategies; and the public-sector-oriented product direction. I direct bounded engineering and independent reviews, including the use of AI coding tools where appropriate. Such development tools are not a PSE runtime or product requirement. Implementation evidence remains distinct from product validation.
 
 ## Current state and verification limits
 
