@@ -1,141 +1,140 @@
-# Project State Explainer
+# Project State Explainer (PSE)
 
-> Structured, evidence-oriented project-state workflows for complex projects.
+> Evidence-backed project intelligence for complex digital transformation — with a strategic focus on public administration.
 
-## Process transformation
+**Mission.** Make digital transformation projects easier to understand, govern, and hand over by distinguishing documented activity from demonstrated progress, decision authority, and measured outcomes.
 
-Complex projects accumulate information across source control, tests, audits, issues, documentation, research notes, operational records, and project-management systems.
+**Product direction.** PSE is a local-first, method-neutral explanation and review layer around existing project information. The long-term ambition is a commercially viable **Project Intelligence & Decision Platform**: broadly useful across sectors, with public-sector digitalization as a primary application domain.
 
-Those sources usually record **activity**. They do not automatically explain what the project can do now, which problems matter, whether a statement is still current, or which evidence supports a conclusion.
+**Maturity.** Active engineering prototype. The platform is **not** presented as a finished commercial product, a validated public-sector deployment, or a substitute for existing project-management systems.
 
-Project State Explainer (PSE) turns that manual interpretation and handover process into an explicit, reviewable workflow:
+## Why this project exists
 
-```text
-Distributed project information
-          |
-          v
-Human authoring / adapters / producers
-          |
-          v
-Structured project-state model
-          |
-          v
-Validation + provenance + freshness
-          |
-          v
-Review / comparison / update lifecycle
-          |
-          v
-Evidence-backed project-state explanation
-```
+Digital transformation projects often span administrative departments, IT service providers, vendors, governance bodies, and changing project teams. Information is scattered across source control, tests, audits, issues, project reports, decisions, documentation, and operational records.
 
-The goal is not to replace existing project tools. PSE adds a structured explanation and review layer around information that already exists.
+These sources primarily describe **activity**. They do not, on their own, establish what a project can do now, which decisions remain unresolved, whether an earlier conclusion is still current, or which evidence supports a claimed result.
 
-## Core engineering problem
+That gap is particularly consequential in public administration. A service can be implemented without being formally accepted, accepted without being operationally available, and launched without evidence that it improves the experience of citizens or staff.
 
-The difficult part is not producing a summary.
+PSE aims to make these distinctions explicit, without requiring an organization to replace the tools and methods it already uses.
 
-Project information is heterogeneous, and no single project-management method or platform can be assumed. The system therefore needs a method-neutral boundary that can sit alongside existing file, CLI, source-control, and browser workflows.
+## The process transformation
 
-State and authority also have to remain explicit. A working draft is not a reviewed snapshot; a reviewed snapshot is not verified truth; a missing problem is not necessarily a resolved problem; and a newer file is not automatically the authoritative project state.
+The intended workflow is an evidence-oriented chain:
 
-PSE therefore models lifecycle, provenance, freshness, evidence, identity, and review status separately rather than collapsing them into a single notion of "current".
+1. **Distributed project information** — reports, decisions, technical artifacts, tests, operational records, and other sources.
+2. **Controlled input** — human authoring, with source adapters and automated producers introduced only under defined contracts.
+3. **Structured project state** — goals, achievements, problems, evidence, roadmap items, decisions, dependencies, and lifecycle state.
+4. **Validation and provenance** — structural checks, exact identity, source references, freshness, and conflict handling.
+5. **Review and comparison** — explicit human authority, immutable accepted baselines, and bounded updates.
+6. **Project-state explanation** — traceable views of what is documented, what has changed, what remains uncertain, and what requires attention.
 
-## Workflow and authority boundaries
+The core distinction is deliberate: **a valid record is not necessarily a true claim; a cited source is not necessarily verification; and a reviewed snapshot is not proof of external reality.**
 
-Two implemented workflows illustrate the design.
+### Example: an online public service
 
-### Human authoring
+For a hypothetical digital application service, PSE should be able to distinguish the evidence for:
 
-```text
-Working Draft
-    |
-    v
-Review
-    |
-    v
-Human Reviewed
-    |
-    v
-Project-state snapshot
-```
+| Question | Relevant project state |
+| --- | --- |
+| Has the functionality been built and tested? | Technical delivery |
+| Has the responsible department accepted the exact deliverable? | Formal or functional acceptance |
+| Are operational, security, and integration prerequisites satisfied? | Service readiness |
+| Can people actually use the service? | Availability and adoption |
+| Did it reduce waiting time, manual work, or media breaks? | Measured outcomes |
 
-Review authority applies only to the exact reviewed content. Editing the content invalidates that authority.
+These are **separately evidenced questions**, not automatic stages where one success proves the next. The ability to compare delivery with real-world outcomes is part of the future product vision, not a claimed current capability.
 
-### Incremental update
+## Engineering foundation: explicit state and authority
 
-```text
-Accepted snapshot
-    |
-    v
-Working Update
-    |
-    v
-Added / Modified / Removed
-    |
-    v
-Review Changes
-    |
-    v
-Human Reviewed
-    |
-    v
-Next snapshot
-```
+The difficult part is not generating a plausible summary. It is preserving identity, evidence, review authority, and lifecycle boundaries across heterogeneous information.
 
-The accepted baseline remains immutable. There is no silent rebase to a newer state and no "continue anyway" path when identity or baseline constraints fail.
+Two implemented workflows illustrate this approach:
 
-## Key engineering decisions
+**Human authoring:** Working Draft → Review → Human Reviewed → Project-state Snapshot.
 
-- **Determinism before inference.** The core can validate, compare, and render project state without requiring an LLM.
-- **No invented project truth.** Contract validation means structural validity, not factual truth; evidence references provide traceability, not automatic proof.
-- **Explicit human review.** Review is a modeled system state tied to exact content rather than an informal flag.
-- **Immutable baselines.** Incremental updates remain bound to the exact accepted snapshot from which they started.
-- **Authority is explicit, not inferred from recency.** File timestamps, filenames, size, or mere validity do not automatically establish the active state.
-- **Fail closed on identity and state conflicts.** The system stops rather than selecting a likely replacement.
-- **Local-first operation.** Core workflows require no mandatory cloud service or AI provider.
-- **Compatibility over replacement.** Existing formats and workflows are extended incrementally rather than replaced by a new platform.
+Review authority is bound to the **exact reviewed content**. Editing that content invalidates the previous authority.
 
-## My role
+**Incremental update:** Accepted Snapshot → Working Update → Added / Modified / Removed → Review Changes → Human Reviewed → Next Snapshot.
 
-My contribution is primarily **product and system architecture, process design, technical steering, and quality governance**.
+An accepted baseline remains immutable. An update cannot silently substitute a different baseline, infer authority from a newer timestamp, or continue past an identity conflict.
 
-This includes defining the project-state semantics, lifecycle and authority boundaries, engineering contracts, acceptance criteria, review gates, integration decisions, recovery behavior, and test strategy, while directing AI-assisted implementation within those constraints.
+Key design decisions include:
+
+- **Determinism before inference.** Core validation, comparison, and rendering do not require an LLM.
+- **No invented project truth.** Source references provide traceability; structural validity and human review do not automatically verify factual claims.
+- **Explicit lifecycle and authority.** Draft, reviewed, accepted, observed, and externally verified states must not be conflated.
+- **Immutable baselines and bounded updates.** Identity and accepted content remain stable through review and change workflows.
+- **Freshness and uncertainty are visible.** A newer file is not automatically authoritative; absent evidence is not evidence of resolution.
+- **Fail closed on material conflicts.** The system does not guess its way through ambiguous identity or state.
+- **Local-first, vendor-independent operation.** Core workflows require no mandatory cloud service or AI provider.
+- **Compatibility over replacement.** PSE is designed to work alongside existing organizational processes and tools.
 
 ## Current implementation
 
-The current Python/browser implementation includes:
+The Python/browser prototype already includes foundations for:
 
-- structured project-state contracts with goals, achievements, problems, evidence, roadmap, decision gates, and dependencies;
-- strict parsing and validation;
-- deterministic rendering and comparison;
-- provenance and freshness modeling;
+- structured project-state contracts covering goals, achievements, problems, evidence, roadmap, decisions, and dependencies;
+- strict parsing, validation, deterministic rendering, and comparison;
+- source provenance, freshness modeling, and explicit review-state handling;
 - human-authoring and incremental-update lifecycles;
-- a local project library and bounded discovery;
+- a local project library with bounded discovery;
 - browser views for overview, comparison, evidence, roadmap, decisions, and dependencies;
-- CLI and batch processing;
-- a core with **0 mandatory runtime dependencies**.
+- CLI and batch processing, with **zero mandatory runtime dependencies for the core**.
 
-## Verification footprint
+A read-only, single-state **Cover Flow V7** and an initial **Project Flow window lifecycle** have also been developed on a feature branch. The broader desktop experience is still under visual refinement and product acceptance. A successful internal engineering check must not be confused with an installed-runtime, accessibility, or external product acceptance.
 
-As supporting implementation evidence, the current repository contains:
+These are implementation foundations, **not** evidence that the premium modules below are already available.
 
-- **51 Python production modules**
-- **61 Python test modules**
-- **13 browser/UI files**
-- **8 test fixtures**
-- latest full verification attributable to the current code state: **1,737 tests, 1 skipped, PASS**
+## Product vision: from project records to decision intelligence
 
-These figures describe implementation and verification scope only. They are not presented as evidence of external product validation.
+The proposed commercial product combines a common project-state core with complementary intelligence capabilities.
 
-## Current state
+| Proposed capability | Intended value |
+| --- | --- |
+| **Project Truth Engine** | Reconcile documented claims with available evidence from project records, code, tests, CI, and other sources; expose contradictions, uncertainty, and verification limits rather than claiming omniscient truth. |
+| **Project Time Machine** | Reconstruct accepted historical states and explain what changed, why, and with which documented consequences. |
+| **Decision & Impact Intelligence** | Connect decisions, blockers, responsibilities, dependencies, and milestones; explore potential impacts without presenting scenarios as observed facts. |
+| **AI Project Copilot** | Answer questions about project state with inspectable source references and explicit uncertainty; AI remains optional and does not confer review authority. |
+| **Architecture & Change Explorer** | Relate technical components, integrations, and changes to project objectives, decisions, risks, and evidence. |
+| **Project Portfolio Intelligence** | Compare projects and cross-organizational dependencies without collapsing incompatible states into misleading aggregate progress scores. |
+| **AI Project Continuity** | Produce evidence-bound handovers showing the accepted baseline, implementation state, known invariants, open blockers, reviews, and safe next steps across personnel or AI-agent changes. |
+| **Outcome Intelligence** | Separate delivery and adoption from measured benefits, and trace outcome claims to actual metrics rather than assuming that completed tasks imply public value. |
 
-PSE is under active development and has not completed external product validation. ProjectLog v2 remains Candidate/Draft.
+**Status of this table:** strategic roadmap, **not a list of shipped features**. Several concepts build on implemented state, comparison, evidence, or browser foundations; cross-source reconciliation, AI-assisted reasoning, technical architecture mapping, portfolio analysis, and measured-outcome evaluation still require separate design, implementation, and validation.
 
-No public claim is made about user adoption, time savings, ROI, production-scale performance, or superiority over existing project-management products.
+### Project Continuity as a practical differentiator
+
+A project handover should answer: What was actually implemented? Which tests and reviews support that assessment? Which decisions are binding? What remains blocked? Which baseline and scope govern the next change?
+
+A future PSE handover could assemble these answers with exact source and revision identities, making transitions between teams, vendors, or AI-assisted development sessions more reliable. It must never manufacture a test result, authorization, or completed milestone.
+
+## Product focus and commercial hypotheses
+
+The intended **GovTech** application is project intelligence for public-sector digitalization: program steering, decision transparency, multi-stakeholder dependencies, handovers, and evidence-based assessments of service readiness and outcomes.
+
+The same core can serve **software teams, technical consultancies, AI-assisted development workflows, and cross-project portfolios**. Engineering environments offer an early opportunity to evaluate precise Git, test, and review evidence; public-sector workflows provide the long-term mission and a demanding validation context.
+
+Possible commercial offerings — **Core, Pro, Team, Gov, and Enterprise** — remain hypotheses rather than available plans or tested pricing. Public-sector adoption would also require appropriate procurement, accessibility, privacy, security, support, and deployment assessments. None of those requirements is claimed to be fulfilled merely by the current architecture.
+
+A first meaningful external validation would test whether a new project stakeholder can identify an evidence-backed current state, important blockers, and the next decision more accurately and efficiently than with the existing information workflow. Measured outcomes, not visual appeal or feature count alone, should guide product prioritization.
+
+## My role
+
+My contribution is primarily **product and system architecture, process transformation, technical steering, and quality governance**.
+
+This includes defining project-state semantics; lifecycle, identity, and authority boundaries; source and evidence contracts; acceptance and regression gates; integration and recovery strategies; and the public-sector-oriented product direction. I direct AI-assisted engineering within bounded scopes and require implementation evidence to be distinguished from product validation.
+
+## Current state and verification limits
+
+PSE remains under active development. **ProjectLog v2 is still Candidate/Draft**, and external product validation is incomplete.
+
+Automated regression tests, browser checks, and independent engineering reviews support individual implementation milestones. They do **not**, on their own, establish user adoption, operational readiness, accessibility compliance, public-sector suitability, time savings, return on investment, or superiority over existing tools.
+
+Earlier repository-size and test-count figures were tied to an older development snapshot and are intentionally not reused here as current measurements. Any future public performance or quality claims should be tied to a dated, reproducible candidate and its exact verification evidence.
 
 ## Public scope
 
-This case study is limited to disclosure-safe architecture, workflow concepts, and aggregate implementation metrics.
+This case study covers disclosure-safe system design, workflow semantics, intended product capabilities, and engineering principles. Real project records, private operational context, credentials, and non-public source material are excluded. Demonstrations and product screenshots should use synthetic data.
 
-Real project data, private operational context, and source code are intentionally excluded. Future examples and screenshots will use synthetic project data.
+The ambition is substantial, but the boundary is simple: **PSE should help people understand what is known, what is not yet established, what changed, and which decision matters next — without confusing a convincing explanation with proven reality.**
