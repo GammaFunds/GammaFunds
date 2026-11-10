@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941" role="img" aria-labelledby="title description">
+<title id="title">From project records to understanding — Project State Explainer</title>
+<desc id="description">Three-part monochrome diagram: fragmented records, a deterministic PSE explanation layer, and evidence-backed project understanding. Below, meaning over activity, evidence boundaries, and explicit human authority.</desc>
+<rect width="1672" height="941" fill="#ffffff"/>
+<text x="72" y="91" font-size="53" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">From project records to understanding</text>
+<text x="72" y="132" font-size="23" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Project State Explainer (PSE) · Deterministic, local-first, evidence-oriented</text>
+<path d="M72 169 L1576 169" stroke="#bbbbbb" stroke-width="1.4" fill="none"/>
+<text x="72" y="216" font-size="16" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">01  INPUT</text>
+<text x="623" y="216" font-size="16" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">02  EXPLANATION LAYER</text>
+<text x="1178" y="216" font-size="16" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">03  OUTPUT</text>
+<rect x="72" y="238" width="401" height="232" rx="15" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.4"/>
+<rect x="623" y="238" width="414" height="232" rx="15" fill="#141414" stroke="#141414" stroke-width="1"/>
+<rect x="1178" y="238" width="398" height="232" rx="15" fill="#ffffff" stroke="#c9c9c9" stroke-width="1.4"/>
+<path d="M492 354 L592 354" stroke="#707070" stroke-width="2.3" fill="none"/>
+<path d="M578 342 L592 354" stroke="#707070" stroke-width="2.3" fill="none"/>
+<path d="M578 366 L592 354" stroke="#707070" stroke-width="2.3" fill="none"/>
+<path d="M1055 354 L1147 354" stroke="#707070" stroke-width="2.3" fill="none"/>
+<path d="M1133 342 L1147 354" stroke="#707070" stroke-width="2.3" fill="none"/>
+<path d="M1133 366 L1147 354" stroke="#707070" stroke-width="2.3" fill="none"/>
+<text x="97" y="287" font-size="28" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">Fragmented information</text>
+<text x="97" y="331" font-size="21" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">ProjectLogs · Git · tests</text>
+<text x="97" y="365" font-size="21" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Issues · decisions · notes</text>
+<path d="M97 389 L448 389" stroke="#dddddd" stroke-width="1.2" fill="none"/>
+<text x="97" y="425" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Different sources and versions</text>
+<text x="97" y="454" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Explicit selection; no automatic truth</text>
+<text x="653" y="287" font-size="28" font-weight="700" fill="#ffffff" font-family="Arial, Helvetica, sans-serif">Project State Explainer</text>
+<text x="653" y="331" font-size="22" font-weight="700" fill="#ffffff" font-family="Arial, Helvetica, sans-serif">Validate  ·  Link  ·  Compare</text>
+<path d="M653 356 L1006 356" stroke="#bcbcbc" stroke-width="1.1" fill="none"/>
+<text x="653" y="396" font-size="21" font-weight="normal" fill="#ffffff" font-family="Arial, Helvetica, sans-serif">Explain documented meaning</text>
+<text x="653" y="430" font-size="20" font-weight="normal" fill="#ffffff" font-family="Arial, Helvetica, sans-serif">Preserve identity and uncertainty</text>
+<text x="1204" y="287" font-size="27" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">Explainable project state</text>
+<text x="1212" y="331" font-size="22" font-weight="normal" fill="#777777" font-family="Arial, Helvetica, sans-serif">•</text>
+<text x="1235" y="331" font-size="21" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">What changed?</text>
+<text x="1212" y="366" font-size="22" font-weight="normal" fill="#777777" font-family="Arial, Helvetica, sans-serif">•</text>
+<text x="1235" y="366" font-size="21" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Why does it matter?</text>
+<text x="1212" y="401" font-size="22" font-weight="normal" fill="#777777" font-family="Arial, Helvetica, sans-serif">•</text>
+<text x="1235" y="401" font-size="21" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">What remains?</text>
+<text x="1212" y="436" font-size="22" font-weight="normal" fill="#777777" font-family="Arial, Helvetica, sans-serif">•</text>
+<text x="1235" y="436" font-size="21" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">What supports each claim?</text>
+<text x="72" y="542" font-size="16" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">WHAT PSE KEEPS EXPLICIT</text>
+<path d="M72 565 L1576 565" stroke="#bbbbbb" stroke-width="1.4" fill="none"/>
+<path d="M568 593 L568 787" stroke="#c5c5c5" stroke-width="1.25" fill="none"/>
+<path d="M1117 593 L1117 787" stroke="#c5c5c5" stroke-width="1.25" fill="none"/>
+<text x="72" y="617" font-size="26" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">Meaning over activity</text>
+<text x="607" y="617" font-size="26" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">Evidence with boundaries</text>
+<text x="1157" y="617" font-size="26" font-weight="700" fill="#151515" font-family="Arial, Helvetica, sans-serif">Explicit human authority</text>
+<path d="M72 638 L519 638" stroke="#dadada" stroke-width="1.1" fill="none"/>
+<path d="M607 638 L1068 638" stroke="#dadada" stroke-width="1.1" fill="none"/>
+<path d="M1157 638 L1576 638" stroke="#dadada" stroke-width="1.1" fill="none"/>
+<text x="72" y="686" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Results: significance and capability</text>
+<text x="72" y="727" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Problems: impact on affected goals</text>
+<text x="72" y="768" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">No inferred progress or health score</text>
+<text x="607" y="686" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Claims linked to recorded evidence</text>
+<text x="607" y="727" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Verification, freshness and truth differ</text>
+<text x="607" y="768" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Unknowns remain visible</text>
+<text x="1157" y="686" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Draft is not a reviewed snapshot</text>
+<text x="1157" y="727" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Newer file is not automatically authoritative</text>
+<text x="1157" y="768" font-size="19" font-weight="normal" fill="#151515" font-family="Arial, Helvetica, sans-serif">Updates stay bound to their baseline</text>
+<path d="M72 818 L1576 818" stroke="#bbbbbb" stroke-width="1.4" fill="none"/>
+<text x="836" y="864" font-size="27" font-weight="700" fill="#151515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">Understand what changed, why it matters, and what remains —</text>
+<text x="836" y="901" font-size="27" font-weight="700" fill="#151515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif">without inventing certainty.</text>
+</svg>
