@@ -10,24 +10,9 @@ Those sources usually record **activity**. They do not automatically explain wha
 
 Project State Explainer (PSE) turns that manual interpretation and handover process into an explicit, reviewable workflow:
 
-```text
-Distributed project information
-          |
-          v
-Human authoring / adapters / producers
-          |
-          v
-Structured project-state model
-          |
-          v
-Validation + provenance + freshness
-          |
-          v
-Review / comparison / update lifecycle
-          |
-          v
-Evidence-backed project-state explanation
-```
+![Project State Explainer — from project records to understanding](assets/pse-project-state-explainer-overview.svg)
+
+*Conceptual workflow: explicitly selected or authored records are validated, linked, and compared. PSE explains documented meaning and evidence boundaries; it does not automatically determine project truth or authority.*
 
 The goal is not to replace existing project tools. PSE adds a structured explanation and review layer around information that already exists.
 
